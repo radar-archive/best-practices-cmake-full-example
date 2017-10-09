@@ -1,0 +1,4 @@
+# CMake
+/build/
+project/bb/cmake/*/build/
+project/bb/cmake/test/*/build/
