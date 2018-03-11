@@ -17,6 +17,8 @@ from the root directory.
 
    cd example
    mkdir -p build
-   cmake -G Xcode ..
+   cd build
+   cmake ..
    cd ..
    cmake --build build
+   cmake --build build --target test
