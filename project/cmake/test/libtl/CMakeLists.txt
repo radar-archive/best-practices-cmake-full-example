@@ -8,7 +8,7 @@ enable_testing()
 set(ROOT $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../../../..>)
 
 macro(local_run TESTNAME)
-  add_test(NAME run_${TESTNAME} COMMAND ${TESTNAME} WORKING_DIRECTORY ${ROOT})
+  add_test(NAME ${TESTNAME} COMMAND ${TESTNAME} WORKING_DIRECTORY ${ROOT})
 
   add_executable(${TESTNAME} ${ARGN})
 
