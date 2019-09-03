@@ -1,3 +1,8 @@
+/// @file
+///
+/// Copyright 2019 RADAR, Inc. - All Rights Reserved
+/// Proprietary and confidential
+
 #define BOOST_TEST_MODULE test_ll
 
 #include "boost/test/included/unit_test.hpp"
