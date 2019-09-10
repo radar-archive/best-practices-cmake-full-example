@@ -11,3 +11,6 @@ add_library(libll
   )
 
 target_include_directories(libll PUBLIC ${ROOT}/src)
+
+target_compile_features(libll PRIVATE cxx_std_14)
+set_target_properties(libll PROPERTIES CXX_EXTENSIONS OFF)
