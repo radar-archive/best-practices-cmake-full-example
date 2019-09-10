@@ -3,9 +3,9 @@ CMake Full Example
 
 .. contents::
 
-This is an example CMake build system that attempts to illustrate the
-approach described in the guidelines below.  The CMake build requires
-CMake 3.7 or later.
+There is a larger example with several libraries, executables, and
+unit tests defined. The structure is laid out as in the Boost.Build
+example to help live next to them, have commonality.
 
 .. code::
 
