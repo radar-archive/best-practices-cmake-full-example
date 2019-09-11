@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mkdir -p build && cd build && cmake .. && cd .. && cmake --build build -- -k'
+                sh 'mkdir -p build && cd build && cmake .. && cd .. && cmake --build build -- -k -j 8'
             }
         }
     }
