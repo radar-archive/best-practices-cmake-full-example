@@ -8,6 +8,10 @@ pipeline {
         }
     }
 
+    environment {
+        DESTDIR = "${WORKSPACE}/installed"
+    }
+
     stages {
         stage('Build') {
             steps {
@@ -22,7 +26,7 @@ pipeline {
         }
         stage('Install') {
             steps {
-                sh 'DESTDIR=installed cmake --build build --target install'
+                sh 'cmake --build build --target install'
             }
         }
     }
