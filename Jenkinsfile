@@ -14,5 +14,11 @@ pipeline {
                 sh 'mkdir -p build && cd build && cmake .. && cd .. && cmake --build build -- -k -j 8'
             }
         }
+        stage('Test') {
+            steps {
+                sh 'ctest --no-compress-output -T Test || true'
+                xunit(tools: [CTest(pattern: 'Testing/*/Test.xml')])
+            }
+        }
     }
 }
