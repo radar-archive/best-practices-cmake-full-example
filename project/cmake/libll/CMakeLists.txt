@@ -28,4 +28,5 @@ install(TARGETS libll
 
 install(EXPORT libll
   NAMESPACE example_
-  DESTINATION lib/cmake/example)
+  DESTINATION lib/cmake/example
+  FILE libllConfig.cmake)
