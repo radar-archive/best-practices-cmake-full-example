@@ -10,3 +10,9 @@ target_link_libraries(example PRIVATE libtl)
 
 target_compile_features(example PRIVATE cxx_std_14)
 set_target_properties(example PROPERTIES CXX_EXTENSIONS OFF)
+
+install(TARGETS example
+  LIBRARY DESTINATION lib
+  ARCHIVE DESTINATION lib
+  RUNTIME DESTINATION bin
+  PUBLIC_HEADER DESTINATION include)
