@@ -20,5 +20,10 @@ pipeline {
                 xunit(tools: [CTest(pattern: 'Testing/*/Test.xml')])
             }
         }
+        stage('Install') {
+            steps {
+                sh 'DESTDIR=installed cmake --build build --target install'
+            }
+        }
     }
 }
