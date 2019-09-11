@@ -7,7 +7,9 @@ set(ROOT $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../../..>)
 
 add_library(libtl INTERFACE)
 
-target_sources(libtl INTERFACE ${ROOT}/src/tl/tl.hpp)
+target_sources(libtl INTERFACE
+  $<BUILD_INTERFACE:${ROOT}/src/tl/tl.hpp>
+  $<INSTALL_INTERFACE:include/tl/tl.hpp>)
 
 target_include_directories(libtl INTERFACE
   $<BUILD_INTERFACE:${ROOT}/src>
