@@ -12,13 +12,13 @@ pipeline {
     }
 
     environment {
-        DESTDIR = "${WORKSPACE}/installed"
+        PREFIX = "${WORKSPACE}/installed"
     }
 
     stages {
         stage('Build') {
             steps {
-                sh 'mkdir -p build && cd build && cmake .. && cd .. && cmake --build build -- -k -j 8'
+                sh 'mkdir -p build && cd build && cmake -DCMAKE_INSTALL_PREFIX=${PREFIX} .. && cd .. && cmake --build build -- -k -j 8'
             }
         }
         stage('Test') {

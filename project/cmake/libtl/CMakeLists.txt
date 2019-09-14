@@ -22,6 +22,6 @@ install(FILES ${ROOT}/src/tl/tl.hpp
   DESTINATION include/tl)
 
 install(EXPORT libtl
-  NAMESPACE example_
-  DESTINATION lib/cmake/example
+  NAMESPACE full-example::
+  DESTINATION lib/cmake/full-example
   FILE libtlConfig.cmake)
