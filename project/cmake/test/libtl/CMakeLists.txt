@@ -19,4 +19,4 @@ endmacro()
 
 local_run(test_tl ${ROOT}/test/tl/test_tl.cpp)
 
-find_package(Boost)
+find_package(Boost REQUIRED)
