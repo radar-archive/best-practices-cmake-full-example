@@ -3,6 +3,8 @@
 
 cmake_minimum_required(VERSION 3.8)
 
+project(full-example)
+
 enable_testing()
 
 add_subdirectory(project/cmake/example)

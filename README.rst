@@ -6,9 +6,12 @@ CMake Full Example
 
 .. contents::
 
-There is a larger example with several libraries, executables, and
-unit tests defined. The structure is laid out as in the Boost.Build
-example to help live next to them, have commonality.
+This example contains a larger example with several libraries,
+executables, and unit tests defined. The structure is laid out as in
+the Boost.Build examples to help live next to them, have commonality.
+
+The full example requires Boost.Test from the Boost C++ Libraries is
+installed on the system.
 
 .. code::
 
@@ -32,9 +35,7 @@ from the root directory.
 
 .. code::
 
-   mkdir -p build
-   cd build
-   cmake ..
-   cd ..
+   mkdir -p build && cd build && cmake -DCMAKE_INSTALL_PREFIX=/tmp/cmake-best-practices .. && cd ..
    cmake --build build
    cmake --build build --target test
+   cmake --build build --target install
