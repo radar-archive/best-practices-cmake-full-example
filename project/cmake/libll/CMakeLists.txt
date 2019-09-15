@@ -27,6 +27,6 @@ install(TARGETS libll
   PUBLIC_HEADER DESTINATION include/ll)
 
 install(EXPORT libll
-  NAMESPACE example_
-  DESTINATION lib/cmake/example
+  NAMESPACE full-example::
+  DESTINATION lib/cmake/full-example
   FILE libllConfig.cmake)
