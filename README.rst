@@ -33,7 +33,7 @@ installed on the system.
 To build and run the tests for the example, run the following commands
 from the root directory.
 
-.. code::
+.. code:: sh
 
    mkdir -p build && cd build && cmake -DCMAKE_INSTALL_PREFIX=/tmp/cmake-best-practices .. && cd ..
    cmake --build build
